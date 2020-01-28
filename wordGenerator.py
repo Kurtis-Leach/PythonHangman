@@ -15,6 +15,8 @@ def getHangmanWord(minCharcters):
         for word in f:
             if '(' in word or ')' in word:
                 continue
+            if len(word) < minCharcters:
+                continue
             wordsProcessed += 1
             if random.randint(1, wordsProcessed) == 1:
                 currWord = word
