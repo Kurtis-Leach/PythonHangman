@@ -11,10 +11,16 @@ def hangman():
             break
         except (NameError, SyntaxError):
             print ('You must choose a number between 1 and 10 not a letter')
-
-    
+    currWord  = getHangmanWord(minCharacter)
+    x = 0
+    blanks = []
+    while x < len(currWord)-1:
+        blanks.append('_')
+        x += 1
+    print (blanks)
     print (maxError)
-    print (minCharacter)
+    print(currWord)
+    print (len(currWord)-1)
 
 def numberInputChecker(inputRecieved):
     if inputRecieved < 1 or inputRecieved > 10:
